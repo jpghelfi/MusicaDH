@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MusicaDH</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_notifications">Notification</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_buscar">Search</string>
 </resources>

@@ -32,6 +32,15 @@ public class MainActivity extends AppCompatActivity {
         musicList.add(new MusicDTO("DCAC","asdads.com"));
         musicList.add(new MusicDTO("ACDC","asdads.com"));
         musicList.add(new MusicDTO("ACDC","asdads.com"));
+        musicList.add(new MusicDTO("ACDC","asdads.com"));
+        musicList.add(new MusicDTO("ACDC","asdads.com"));
+        musicList.add(new MusicDTO("ACDC","asdads.com"));
+        musicList.add(new MusicDTO("ACDC","asdads.com"));
+        musicList.add(new MusicDTO("ACDC","asdads.com"));
+        musicList.add(new MusicDTO("ACDC","asdads.com"));
+        musicList.add(new MusicDTO("ACDC","asdads.com"));
+        musicList.add(new MusicDTO("ACDC","asdads.com"));
+        musicList.add(new MusicDTO("ACDC","asdads.com"));
 
         //Busco el RecyclerView para luego poder setearle el adaptador
         RecyclerView recyclerMusic = (RecyclerView) findViewById(R.id.recyclerViewMainActivity);
@@ -40,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerMusic.setHasFixedSize(true);
 
         //Le pedimos que muestre las cosas en forma de lista
-        recyclerMusic.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false));
+        recyclerMusic.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false));
 
         //Le pedimos que muestre las cosas en forma de grilla
         //recyclerViewPersonajes.setLayoutManager(new GridLayoutManager(this,2));

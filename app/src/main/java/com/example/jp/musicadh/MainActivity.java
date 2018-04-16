@@ -27,6 +27,71 @@ public class MainActivity extends AppCompatActivity {
 
         BottomNavigationViewHelper.removeShiftMode(navigationView);
 
+        this.fillCells();
+
+        this.createRecyclerView();
+        this.createRecyclerView2();
+
+
+    }
+
+    private void createRecyclerView() {
+        //Busco el RecyclerView para luego poder setearle el adaptador
+        RecyclerView recyclerMusic = (RecyclerView) findViewById(R.id.recyclerViewMainActivity);
+
+        //Le decios que no va a variar el tamanio de la lista
+        recyclerMusic.setHasFixedSize(true);
+
+        recyclerMusic.setNestedScrollingEnabled(false);
+
+        //Le pedimos que muestre las cosas en forma de lista
+        recyclerMusic.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false));
+
+        //Le pedimos que muestre las cosas en forma de grilla
+        //recyclerViewPersonajes.setLayoutManager(new GridLayoutManager(this,2));
+
+
+        //Creamos el adaptador del recycler
+        AdapterMainRecycler adapter = new AdapterMainRecycler(this,musicList);
+
+
+        //Al listView le seteo el adapter
+        //unaViewList.setAdapter(unAdapterDePersonajes);
+
+        //Le damos el adapter al Recycler
+        //listViewJuguetes.setAdapter(adaptadorDeJuguetes);
+        recyclerMusic.setAdapter(adapter);
+    }
+
+    private void createRecyclerView2() {
+        //Busco el RecyclerView para luego poder setearle el adaptador
+        RecyclerView recyclerMusic = (RecyclerView) findViewById(R.id.recyclerViewMainActivity2
+        );
+
+        //Le decios que no va a variar el tamanio de la lista
+        recyclerMusic.setHasFixedSize(true);
+        recyclerMusic.setNestedScrollingEnabled(false);
+
+        //Le pedimos que muestre las cosas en forma de lista
+        recyclerMusic.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false));
+
+        //Le pedimos que muestre las cosas en forma de grilla
+        //recyclerViewPersonajes.setLayoutManager(new GridLayoutManager(this,2));
+
+
+        //Creamos el adaptador del recycler
+        AdapterMainRecycler adapter = new AdapterMainRecycler(this,musicList);
+
+
+        //Al listView le seteo el adapter
+        //unaViewList.setAdapter(unAdapterDePersonajes);
+
+        //Le damos el adapter al Recycler
+        //listViewJuguetes.setAdapter(adaptadorDeJuguetes);
+        recyclerMusic.setAdapter(adapter);
+    }
+
+    private void fillCells() {
         musicList = new ArrayList<>();
         musicList.add(new MusicDTO("XXXX","asdads.com"));
         musicList.add(new MusicDTO("DCAC","asdads.com"));
@@ -41,35 +106,6 @@ public class MainActivity extends AppCompatActivity {
         musicList.add(new MusicDTO("ACDC","asdads.com"));
         musicList.add(new MusicDTO("ACDC","asdads.com"));
         musicList.add(new MusicDTO("ACDC","asdads.com"));
-
-        //Busco el RecyclerView para luego poder setearle el adaptador
-        RecyclerView recyclerMusic = (RecyclerView) findViewById(R.id.recyclerViewMainActivity);
-
-        //Le decios que no va a variar el tamanio de la lista
-        recyclerMusic.setHasFixedSize(true);
-
-        //Le pedimos que muestre las cosas en forma de lista
-        recyclerMusic.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false));
-
-        //Le pedimos que muestre las cosas en forma de grilla
-        //recyclerViewPersonajes.setLayoutManager(new GridLayoutManager(this,2));
-
-
-
-
-        //Creamos el adaptador del recycler
-        AdapterMainRecycler adapter = new AdapterMainRecycler(this,musicList);
-
-
-        //Al listView le seteo el adapter
-        //unaViewList.setAdapter(unAdapterDePersonajes);
-
-        //Le damos el adapter al Recycler
-        //listViewJuguetes.setAdapter(adaptadorDeJuguetes);
-        recyclerMusic.setAdapter(adapter);
-
-
-
     }
 }
 

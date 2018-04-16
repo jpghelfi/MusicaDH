@@ -6,7 +6,7 @@
     <item
         android:icon="@drawable/ic_home_black_24dp"
         android:title="@string/nav_home"
-        app:showAsAction="always|withText" />
+        app:showAsAction="always|withText"  />
     <item
         android:icon="@drawable/ic_person_black_24dp"
         android:title="@string/nav_notifications"

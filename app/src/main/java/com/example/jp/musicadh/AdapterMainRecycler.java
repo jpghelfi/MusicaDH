@@ -23,11 +23,7 @@ public class AdapterMainRecycler extends RecyclerView.Adapter{
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        LayoutInflater layoutInflater = LayoutInflater.from(context);
-        View cellView = layoutInflater.inflate(R.layout.celda_recycler_main, parent, false);
-        MusicViewHolder musicViewHolder = new MusicViewHolder(cellView);
-        return musicViewHolder;
-
+        return new MusicViewHolder(LayoutInflater.from(context).inflate(R.layout.celda_recycler_main, parent, false));
     }
 
     @Override
